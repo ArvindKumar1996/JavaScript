@@ -1,0 +1,26 @@
+<!--Create a class Factorial and make a method fact(num) to find the factorial of any number by using javascript.-->
+<!doctype html>
+<html>
+<head>
+<script>
+function show(){
+
+var i, no, fact;
+fact=1;
+no=Number(document.getElementById("num").value);
+for(i=1; i<=no; i++)  
+{
+fact= fact*i;
+}  
+document.getElementById("answer").value= fact;
+}
+</script>
+</head>
+<body>
+Enter Num: <input id="num">
+<br><br>
+<button onclick="show()">Factorial</button>
+<br><br>
+<input id="answer">
+</body>
+</html>

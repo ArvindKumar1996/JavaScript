@@ -1,0 +1,18 @@
+<script>
+     function getShort(){
+	          var fullname=document.getElementById("fname").value;
+			  var shortname=fullname.charAt(0)+". ";
+			  var lspace=fullname.lastIndexOf(' ');
+			  for(i=1;i<lspace;i++)
+			  {
+			       if(fullname.charAt(i)==' ')
+				   shortname=shortname+fullname.charAt(i+1)+". ";
+			  }
+			  shortname=shortname+fullname.substring(lspace+1);
+			  alert(shortname);
+	 }
+</script>
+Enter Your full name:
+<input type="text" id="fname" />
+<br><br>
+<button onclick="getShort()">Get Short Name</button>

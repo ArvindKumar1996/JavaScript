@@ -1,0 +1,13 @@
+<!-- Create a HTMl page to print Hello message after every second-->
+<html>
+<head>
+<script>
+      function test(){
+	        document.write("Hello<br>");
+			window.setTimeout("test()",1000);
+	  }
+</script>
+</head>
+<body onload="test()">
+</body>
+</html>

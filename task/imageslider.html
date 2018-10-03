@@ -1,0 +1,40 @@
+<html>
+<head>
+<script>
+     var ImgArr=["1.jpg","2.jpg","3.jpg","4.jpg"];
+	 var x=0;
+	 function moveSlider(){
+	 document.getElementById("img1").src="../images/"+ImgArr[x];
+	 x++;
+	 if(ImgArr.length==x)
+	 {
+	 x=0;
+	 }
+	 window.setTimeout("moveSlider",1000);
+	 }
+	 function blue(){
+	    document.getElementById("img1").style="border:10px solid blue";
+	 }
+	  function ygreen(){
+	    document.getElementById("img1").style="border:10px solid yellowgreen";
+	 }
+	 function yellow(){
+	    document.getElementById("img1").style="border:10px solid yellow";
+	 }
+	 function pink(){
+	    document.getElementById("img1").style="border:10px solid pink";
+	 }
+</script>
+</head>
+<body onload="moveSlider()">
+<br><br>
+<button style="background:blue;color:white;" onclick="blue()">Blue</button>
+<button style="background:yellowgreen;color:white;" onclick="ygreen()">Yellowgreen</button>
+<button style="background:yellow;color:white;" onclick="yellow()">Yellow</button>
+<button style="background:pink;color:white;" onclick="pink()">PINK</button>
+<br><br>
+<center>
+<img id="img1"  src="../images/1.jpg" style="height:350px;width:90%;border:10px solid red;">
+</center>
+</body>
+</html>

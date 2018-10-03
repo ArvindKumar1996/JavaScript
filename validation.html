@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txt">
+    <button id="btn">Button</button>
+    <script>
+         document.getElementById('btn').addEventListener('click',fun);
+          function fun(){
+             var val=document.getElementById("txt").value;
+             var upper=0;
+             var lower=0;
+             var strLenght=val.length;
+             var splCount=0;
+             for(i=0;i<val.length;i++){
+                 if(val.charAt(i)==val.charAt(i).toUpperCase()){
+                     upper++;
+                 }
+                 else if(val.charAt(i)==val.charAt(i).toLowerCase()){
+                     lower++;
+                 }
+                 else if(val.charCodeAt(i)==64){
+                     splCount++;
+                 }
+             }
+             if(upper>0 && lower>0 && strLenght>=5 && strLenght<=10 && splCount>0){
+                 alert("Correct");
+             }
+             else{
+                 alert("Incorrect");
+             }
+          }
+    </script>
+</body>
+</html>

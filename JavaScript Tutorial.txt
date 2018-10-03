@@ -1,0 +1,397 @@
+ <!--.............................................JavaScript.....................................-->
+
+Introduction:
+=============
+=>JavaScript of the programming language of HTML.
+=>JavaScript is the client side scripting language.
+=>JavaScript is a high level,untyped language.
+=>JavaScript is a interpreted programming language.
+=>JavaScript runs in client's browser.
+=>JavaScript has been standarized in the ECMA Script language specification.
+=>JavaScript is 'Object based' language.
+
+            created in May 1995 old name="MOCHA"
+=>JavaScript is created by "NetScape Corporation".
+                              Brendan Eich 
+                              ------------
+                               Invertor of JavaScript
+
+
+Features of JavaScript:
+=======================
+=>JS provides client side validation.
+=>JS can detect the client's browser and os.
+=>JS is simple.
+=>DOM traversing.
+=>DOM Manipulation.
+=>Event handling.
+=>Fast Execution.
+=>Cross browser support.
+
+Dialog box in JS:
+=================
+1) Alert():
+           It is used to display a message.
+		   Syntax:
+		   -------
+		            alert("message");
+		   Ex: 
+		        alert("I am Indian.");
+
+2) Prompt():
+            It is used to get input from user.
+=>By using this function we can read any type of value.
+=>It returns value in string form.
+=>In JS prompt() is an overloaded function.
+ 
+          Syntax:
+          -------
+                  prompt("Message");
+                   ------OR------
+	              prompt("Message","placeholder");
+
+3) Confirm():
+             It is used to get confirmation from user.
+=>Return type of this function is boolean(true/false).
+          Syntax:
+          -------
+                  confirm("Message");
+          Ex: a=confirm("Are you sure, you want to delete this record?.");
+
+
+UDF(User Define Function) in JS:
+================================
+=>A function is a block/group of code that is used to perform an action/task.
+=>A programmer can create user define function to perform some task.
+          Syntax:
+          -------
+                 function functionName(ListOfParameters)
+                  {
+                    //Statements....
+                   }
+=>Here function is a keyword that is used to define functon in JS.				   
+
+							   
+DOM Manipulation in JS:
+==================================
+=>We can access and modify content of a HTML page by using JS.
+=>JS provides following three properties to access and modify DOM content.
+
+1) Value:
+---------
+         This property is used to get/set the content of form controls.
+		 Ex:  input, textarea, button, select tag.
+		 
+		 Syntax to get:
+		 --------------
+		 var x=ElememntObject.value;
+		 Ex: var x=txt1.value;
+		 
+         Syntax to set:
+		 --------------
+		 ElememntObject.value=variable/value;
+		 Ex: txt3.value;
+		 
+2)innerText:
+-------------
+             This property is used to get/set the content(Text) of nomal HTML tags.
+			 Ex:
+                 hr,div,p,table,span,etc.....
+
+               Syntax to get:
+			   ----------------
+			   var x=ElememntObject.innerText;
+               Ex:  var x=dv1.innerText;
+               Syntax to Set:
+			   ---------------
+               ElememntObject.innerText=variable/value;
+               dv1.innerText="Hello World";
+
+3)innerHTML:
+--------------
+               This propertyis used to get/set the formatted content (HTML Text) of nomal HTML tags .
+               Ex: table,div,p,span,etc...
+               Syntax to get:
+			   --------------
+			   var x=ElememntObject.innerHTML;
+               Ex: var x=dv1.innerHTML;
+               Syntax to set:
+			   --------------
+               ElememntObject.innerHTML=variable/value;
+               dv1.innerHTML="Hello world";
+
+===============================================================================================================
+
+Looping statement:
+===================
+1) Initialization (Start value)
+
+2) Condition (Stop Condition)
+
+3) Updation (Increament/Decreament)
+   
+   a) for(Initialization;condition;updation)
+          {
+		  // statements....
+		  }
+   b) Initialization;
+        while(condition)
+        {
+           //statements....
+           Updation;
+         }
+		 
+		 
+		 
+<===============================================Task============================================================>		 
+Task-1:
+=======
+ Create a HTML page to calculate percentage of a student by getting marks of 5 subject (5 textbox).
+ Display total marks and percentage in div tag on button click.
+ 
+Task-2:
+=======
+ Create a HTML page to display content of one p tag into another p tag on button click.
+ Hint: Display an image and some text in forst p tag then display this in another p tag by using innerText and innarHTML.
+ 
+Task-3:
+=======
+Create a HTML page to find the reverse of a number by using js.
+
+Task-4:
+Create a HTMLpage to find max number from numbers by using js.
+
+Task-5:
+=======
+Create a HTML page to display 50 times "Welcome" message inside a div tag.
+
+Task-6:
+=======
+ Create HTML page to display Different-2 four images on click  of 4 different button.
+
+Satyam Mishra
+mob: 7080102007
+
+<===============================================End of Task==================================================>   
+
+
+Array in JS:
+=============
+=>In JS an array is a colllection of same type or diff-2 type of data items in a single unit.
+=>Arrayis used to store bulk record/data.
+=>We have length property to get the size of array in JS.
+=>First index of an array is zero and last index of an array is size-1.
+
+      Syntax:
+	  -------
+	  var ArrayName=[val1,val2,val3,.....];
+	    ------------OR----------------
+		var ArrayName=new Array();
+		
+Hint: Here Array(size) is a constructor in JS.
+
+Ex:
+    var names=["Ram","Abdul","Scott","Henary"];
+	      --------------OR----------------
+		  var marks=new Array(10);
+		  
+Nested Loop:
+=============
+=>We can use  one loop inside another loop.
+   This concept  is known as nessted loop.
+   
+=> First loop is known as "outer loop" and second loop is known as "inner loop"  works for "columns".
+
+=> For every iteration of outer loop; inner loop iterates for his complete time (from start to end).
+
+
+    Ex:   for(i=1;i<=3;i++)     //outer loop for row
+	      {
+		      for(j=1;j<=5;j++)   // inner loop for columns
+			  { 
+			  document.write("i= "+i+"j= "+j+"");
+			  }
+			  document.write("<br>");
+		  }
+		  
+		  
+		  output:
+		  =======
+		          i= 1j= 1i= 1j= 2i= 1j= 3i= 1j= 4i= 1j= 5
+                  i= 2j= 1i= 2j= 2i= 2j= 3i= 2j= 4i= 2j= 5
+                  i= 3j= 1i= 3j= 2i= 3j= 3i= 3j= 4i= 3j= 5
+				  
+				  
+Working with string in JavaScript:
+===================================
+=>When we will asign a string value to a variable that time variable automatically converted in string type.
+=>String is the collection of multiple character.
+
+Some important function and properties.
+======================================
+Length: This property is used to get the number of character of a string.
+charAt(): It is used to get the character of a particular index.  
+           Syntax: var varName=stringVariable.charAt(index);
+		   Ex:
+		       var name="Softpro India";
+			   var x=name.charAt(3);  //x=t
+			   
+3) charCodeArt(): This function is used to get a ASCII value of a particular index character.
+        a) a- z= 97-122
+		b) A -Z= 65-90
+		c) 0 -9= 48-57
+		
+4) indexOf(): This function is used to get index of a specific character.
+          Ex: var name:"Softpro india";
+		  var x=name.indexOf('i');   // x=8
+		  
+5) lastIndexOf(): This function is used to get last index of a specific character.
+          Ex: var name:"Softpro india";
+		  var x=name.indexOf('i');   // x=11
+		  
+6)  substring(): This function is used to cut a string from another string.
+          Syntax: var VarName=StringVar.substring(StarIndex,EndIndex);
+		  Ex: var city="Lucknow";
+		  var city.substring(2,5);     //x="ckno"
+		  
+		  
+		  
+		  
+**** ===================================Advance JS====================================********
+Concept of  Object in JS:
+=========================
+
+=> An object is a run time entity.It represents the features of a class/UDDT.
+=>In JS {} bracket is used to represent an object.
+
+syntax:
+-------
+    var ObjName/ClassName={Property1:value,Property2:value,............,FunctionName1:FunctionDifiniton,....};
+	
+	
+	Ex:
+	var student={name:"Ram Singh", Age:25,City:"Lucknow"};
+	
+	alert(student.name);
+	alert(student.Age);
+	alert(student.City);
+	
+	
+	
+Task-1:
+=======
+Create a HTML page to find reverse of a string by using JS.
+
+Task-2:
+=======
+Create a HTML page to count number of digits in a given sentence by using JS.
+
+Task-3:
+=======
+Create a HTML page to get names of 5 employees then display names in ascending order.
+
+Task-4:
+========
+create a class "Marksheet"  to get name and marks of 5 subject then display total marks and percentage.
+
+Task-5:
+========
+Create  a class CurrencyConvertoer to convert USD to INR, INR to USD.
+
+Task-6:
+========
+Create a class circle to get radius and print area, parameter, by using 2 different UDP(User Defined type function).
+
+Tasks:
+======================================
+Task-1:
+======
+WAP in JS to make a dropdrownlist bind state names into this dropdrownlist list when user select StateName
+from dropdownlist then city names display into another dropdownlist list related to that state.
+
+Task-2:
+=======
+Make a Image Slider and make 4 button (Green ,red, Yellow and blue ) when user click on button then border of image slider create according to that button .
+
+Task-3:
+========
+Develop an application into javascript display multiple text color of dropdownlist items.
+
+
+class:
+===========================================================
+
+class: Class is container and it is also user define data type.
+
+=>Class is the collection of data members(variables) and data methods(function). 
+
+
+
+
+Syntax:-
+
+class ClassName{
+//data members(variable)
+//data methods(functions)
+}
+
+
+Example:-
+----------------
+class Addition
+{
+add()
+{
+//Logic for addition
+}
+}
+
+
+
+How we can call method from class
+----------------------------------
+var ObjectName=new ClassName();
+
+Example:-
+
+var s=new Addition();
+s.add();
+
+Date:
+-----------
+
+Date is a built-in class in javascript .that is used for the date ,time or anything related to datetime.
+
+Syntax:-
+---------
+
+var ObjectName=new Date();
+
+
+
+
+Task:
+=======================================
+Task-1:
+---------
+Create a class Factorial and make a method fact(num) to find the factorial of any number by using javascript.
+
+Task-2:
+------
+WAP in javascript to check a number is prime or not by using external class with CheckPrime.
+
+Task-3:
+-------
+WAP in javascript to add two number by using constructor.
+
+Task-4:
+--------
+Create a div and make two part of div first part move image slider and second with text slider together.
+
+Task-5:
+--------
+Develop a webpage of html by using javascript to print 100 number into a div by using class "PrintNumber".
+
+
+
+8953422402 Akhilesh	

@@ -1,0 +1,68 @@
+<!--WAP in JS to make a dropdrownlist bind state names into this dropdrownlist list when user select StateName
+from dropdownlist then city names display into another dropdownlist list related to that state.-->
+<html>
+<head>
+<script>
+      // Create a method for Exception handling
+	  window.onerror=function(msg,url,line,col)
+	  {
+	  alert("Error Message : "+msg+" File Location :"+url+" Line Number :"+line+" Column Number :"+col);
+	  }
+     var ucity=["Allahabad","Sitapur","Kanpur","Lucknow"];
+     var mcity=["Bhopal","Sitapur","Kanpur","Lucknow"];
+     var bcity=["Patna","Sitapur","Kanpur","Lucknow"];
+     var dcity=["New Delhi","Sitapur","Kanpur","Lucknow"];
+	 function SelectState(){
+	       var v1=document.getElementById("ddlstate").value;
+		   if(v1=="0")
+		   {
+		   alert("Plz select any state.");
+		   document.getElementById("city").innerHTML="";
+		   }
+		   else if(v1=="U.P"){
+		       var s1="<select><option value='0'>--Select City--</option>";
+			   for(var i=0;i<ucity.length;i++){
+			   s1+="<option value="+ucity[i]+">"+ucity[i]+"</option>";
+			   }
+			   s1+="</select>";
+			   document.getElementById("city").innerHTML=s1;
+		   }
+		   else if(v1=="M.P"){
+		       var s1="<select><option value='0'>--Select City--</option>";
+			   for(var i=0;i<mcity.length;i++){
+			   s1+="<option value="+mcity[i]+">"+mcity[i]+"</option>";
+			   }
+			   s1+="</select>";
+			   document.getElementById("city").innerHTML=s1;
+		   }
+		   else if(v1=="BIHAR"){
+		       var s1="<select><option value='0'>--Select City--</option>";
+			   for(var i=0;i<bcity.length;i++){
+			   s1+="<option value="+bcity[i]+">"+bcity[i]+"</option>";
+			   }
+			   s1+="</select>";
+			   document.getElementById("city").innerHTML=s1;
+		   }
+		     else if(v1=="DELHI"){
+		       var s1="<select><option value='0'>--Select City--</option>";
+			   for(var i=0;i<dcity.length;i++){
+			   s1+="<option value="+dcity[i]+">"+dcity[i]+"</option>";
+			   }
+			   s1+="</select>";
+			   document.getElementById("city").innerHTML=s1;
+		   }
+	 }
+</script>
+</head>
+<body>
+      Select State Name: <select id="ddlstate" onchange="SelectState()">
+	  <option value="0">--Select State--</option>
+	  <option value="U.P">U.P.</option>
+	  <option value="M.P">M.P.</option>
+	  <option value="BIHAR">BIHAR</option>
+	  <option value="DELHI">DELHI</option>
+	  </select>
+	  <br><br>
+	  <span id="city"></span>
+</body>
+</html>

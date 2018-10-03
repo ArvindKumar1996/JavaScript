@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+         #red{
+             height: 150px;
+             width: 150px;
+             background: red;
+         }
+         #blue{
+             height: 150px;
+             width: 150px;
+             background: blue;
+         }
+         body{
+             transition: 0.8s;
+         }
+    </style>
+</head>
+<body id="bdy">
+     <div id="red">
+         <h1>Red</h1>
+     </div>
+     <div id="blue">
+            <h1>Blue</h1>
+        </div>
+        <script>
+               document.getElementById("red").addEventListener("click", bgRed);
+               document.getElementById("blue").addEventListener("click", bgBlue);
+               function bgRed(){
+                   document.getElementById("bdy").style.backgroundColor="red";
+               }
+               function bgBlue(){
+                   document.getElementById("bdy").style.backgroundColor="blue";
+               }
+        </script>
+        <h1 id="timer" style="z-index:999;"></h1>
+        <script>
+             function time(){
+                 var date=new Date();
+                 var time=date.toLocaleTimeString();
+                 document.getElementById("timer").innerText=time;
+             }
+             setInterval(function{time()}, 1000);
+        </script>
+</body>
+</html>

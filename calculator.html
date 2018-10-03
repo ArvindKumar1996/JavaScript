@@ -1,0 +1,39 @@
+<html>
+<head>
+    <script>
+	    function fun(num1,num2,op)
+		{
+		  num1=parseInt(num1);
+		  num2=parseInt(num2);
+		  switch(op)
+		  {
+		      case "+":
+			  result=num1+num2;
+			  break;
+			  case "-":
+			  result=num1-num2;
+			  break;
+			  case "*":
+			  result=num1*num2;
+			  break;
+			  case "/":
+			  result=num1/num2;
+			  break;
+			  default:
+			  result=0;
+		  }
+		  alert(result);
+		}
+	</script>
+</head>
+<body>
+   <input type="number" id="txt1"  placeholder="Enter first number" />
+   <br><br>
+   <input type="number" id="txt2"  placeholder="Enter second number" />
+   <br><br>
+   <input type="button" onclick="fun(txt1.value,txt2.value,this.value)" value="+" />
+   <input type="button" onclick="fun(txt1.value,txt2.value,this.value)" value="-" />
+   <input type="button" onclick="fun(txt1.value,txt2.value,this.value)" value="*" />
+   <input type="button" onclick="fun(txt1.value,txt2.value,this.value)" value="/" />
+</body>
+</html>

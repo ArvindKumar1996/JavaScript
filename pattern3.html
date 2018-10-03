@@ -1,0 +1,28 @@
+<!-- Create a pattern
+      *
+     * *
+    * * *
+   * * * *
+  * * * * *
+	
+-->
+
+<html>
+<head>
+  <script>
+       var r,c;
+	   for(r=1;r<=5;r++)    //outer loop for row
+	   {    
+	       for(sp=1;sp<=(5-r);sp++)   // space(sp) sp=1 sp<=(5-r)
+		   {
+		       document.write("&nbsp;");    
+		   }
+	       for(c=1;c<=r;c++)    //inner loop for columns  --or  
+		   {
+		      document.write("* ");
+		   }
+		     document.write("<br>");
+	   }
+  </script>
+</head>
+</html>

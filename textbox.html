@@ -1,0 +1,29 @@
+<!-- Create HTML page to read name from textbox and display that name in span ,textbox, and alert box also -->
+
+<html>
+<head>
+<script>
+     function printName()
+	 {
+	 var t,name;
+	 t=document.getElementById("txt");
+	 name=t.value;
+	 var tr=document.getElementById("txtresult");
+	 tr.value=name;
+	 var s=document.getElementById("sp");
+	 s.innerHTML="Your name is: <b>"+name+"</b>";
+	 alert(name);
+	 }
+</script>
+</head>
+<body>
+  Enter your name :
+  <input type="text" id="txt"/>
+  <br><br>
+  <input type="button" value="submit" onclick="printName()" />
+  <br><br>
+  <input type="text" id="txtresult" />
+  <br><br>
+  <span id="sp"></span>
+</body>
+</html>

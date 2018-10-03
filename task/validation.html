@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="un">
+    <button onclick="verify()">Test</button>
+    <script>
+         function verify(){
+             var pattern=/^[a-zA-Z0-9]{2,8}$/;
+             var username=document.getElementById("un").value;
+             if(pattern.test(un)){
+                alert("Worked!!!");
+             }
+             else if(!pattern.test(un)){
+                  alert("Error!!!");
+             }
+         }
+    </script>
+</body>
+</html>

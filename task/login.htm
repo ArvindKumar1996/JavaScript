@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="lib/w3.css">
+<head>
+   <script>
+             function fun(){
+			           var a=document.getElementById("txt1").value;
+					   var b=document.getElementById("txt2").value;
+					   var name="arvind";
+					   var pass="password";
+					   if((a==name) && (b==pass))
+					   {
+					   alert("You Logged in successfully.");
+					   window.location.href="demo8.htm";
+					   }
+					   else
+					   {
+					   alert("sorry!");
+					   }
+					 }
+   </script>
+</head>
+<body>
+<div class="w3-container w3-third"></div>
+<div class="w3-container w3-third">
+<br><br>
+<div class="w3-card-4">
+  <div class="w3-container w3-red">
+     <h2>Login Form</h2>
+  </div>
+          <p>
+          <input class="w3-input" id="txt1" type="text" placeholder="Email or Phone" required>
+          <label class="w3-label w3-validate">Email or Phone</label></p>
+          
+		  <p>
+          <input class="w3-input" id="txt2" type="password" placeholder="Password" required>
+          <label class="w3-label w3-validate" >Password</label></p>
+         
+		  <p>
+		  <button class="w3-btn-block w3-green" onclick="fun()">Login</button></p>
+          <p><input class="w3-check w3-margin-top" type="checkbox" checked="checked"> Remember me</p>
+		  </div>
+    </div>
+	<div class="w3-container w3-third"></div>
+</body>
+</html> 
+</html>

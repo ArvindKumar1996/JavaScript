@@ -1,0 +1,24 @@
+<html>
+<head>
+<script>
+        function fun(){
+		      var count=0;
+			  var a=document.getElementById("txt1").value;
+			  for(i=0;i<a.length;i++)
+			  {
+			    var ch=a.charAt(i).toLowerCase();
+               if(ch=='a' || ch=='i'||ch=='o' || ch=='e' || ch=='u')	
+                 count++;			   
+			  }
+			  alert("Number of vowels are: "+count);
+		}
+</script>
+</head>
+<body>
+    Enter a Text:
+	<br><br>
+    <textarea id="txt1"></textarea>
+	<br><br>
+	<input type="button" value="Count Vowels" onclick="fun()" />
+</body>
+</html>

@@ -1,0 +1,15 @@
+<script>
+      var rectangle={
+	      length:0,
+		  width:0,
+		  getArea:function()
+		  {
+		     var a=this.length*this.width;
+			 return a;
+		  }
+	  };
+	   rectangle.length=prompt("Enter Length: ");
+	   rectangle.width=prompt("Enter width: ");
+	   var result=rectangle.getArea();
+	   alert("Area of rectangle is: "+result);
+  </script>

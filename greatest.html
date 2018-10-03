@@ -1,0 +1,33 @@
+<html>
+   <head>
+   <script>
+      function fun(){ 
+	   var x,y,z;
+	   x=document.getElementById("txt1").value;
+	   y=document.getElementById("txt2").value;
+	   z=document.getElementById("txt3").value;
+	   if(x>y || x>z)
+	   { 
+	     alert(x);
+	   }
+	    if(y>x || y>z)
+	   { 
+	     alert(y);
+	   }
+	    else
+	   { 
+	     alert(z);
+	   }
+	   }
+   </script>
+   </head>
+   <body>
+   <input type="text" id="txt1" />
+   <br><br>
+   <input type="text" id="txt2" />
+   <br><br>
+   <input type="text" id="txt3" />
+   <br><br>
+   <input type="button" onclick="fun()" value="Click" />
+   </body>
+</html>

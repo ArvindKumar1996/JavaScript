@@ -1,0 +1,34 @@
+<html>
+<head>
+<script>
+      function manage(imgno)
+	  {
+		  var bannerImg=document.getElementById("banner");
+		  switch(imgno)
+		  {
+		     case 1:
+			 bannerImg.src="images/1.jpg";
+			 break;
+			 case 2:
+			 bannerImg.src="images/2.jpg";
+			 break;
+			 case 3:
+			 bannerImg.src="images/3.jpg";
+			 break;
+			 case 4:
+			 bannerImg.src="images/4.jpg";
+			 break;
+			 
+		  }
+	  }
+</script>
+</head>
+<body>
+   <img id="banner" width="800px" height="300px"/>
+   <br><br>
+   <input type="button"  onmouseover="manage(1)" value="Man" />
+   <input type="button"  onmouseover="manage(2)" value="Birds" />
+   <input type="button"  onmouseover="manage(3)" value="Nature" />
+   <input type="button"  onmouseover="manage(4)" value="Animal" />
+</body>
+</html>

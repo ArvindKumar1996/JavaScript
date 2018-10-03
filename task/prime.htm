@@ -1,0 +1,29 @@
+<!--WAP in javascript to check a number is prime or not by using external class with CheckPrime.-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function findPrime(){
+                var num = document.getElementById('num').value;
+                var c = 0;
+                for (i = 1; i <= num; i++) {
+                    if (num % i == 0) {
+                        c = c + 1;
+                    }
+                }
+                if (c == 2) {
+                    document.getElementById('result').innerHTML = num + ' is a Prime number';
+                }else{
+                    document.getElementById('result').innerHTML = num + ' is NOT a Prime number';
+                }
+            }        
+        </script>
+    </head>
+    <body>
+            Enter a number:  <input type="number" id="num" name="num" min="0" />
+			<br><br>
+			<input type="button" value="Find Prime Number" onclick="findPrime()" name="find" />
+			<br><br>
+            <div style="margin-top: 10px;" id="result"></div>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!-- Create a HTML page to print table of a number using js -->
+<html>
+<head>
+    <script>
+	          function tab()
+			  {
+			   var num,p,i,r,x="";
+			   num=document.getElementById("txt").value;
+			   for(i=1;i<=10;i++)
+			   {
+			    r=num*i;
+				x=x+num+"*"+i+"= "+r+"<br>";
+			   }
+			   p=document.getElementById("para");
+			   p.innerHTML=x;
+			  }
+	</script>
+</head>
+<body>
+     Enter a number: 
+	 <input type="number" id="txt" />
+	 <br><br>
+	 <input type="button" value="Get Table" onclick="tab()"></button>
+	 <p id="para"></p>
+</body>
+</html>

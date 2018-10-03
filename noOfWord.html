@@ -1,0 +1,24 @@
+<html>
+<head>
+<script>
+        function fun(){
+		      var count=1;
+			  var sen=document.getElementById("txt").value;
+			  for(i=0;i<sen.length;i++)
+			  {
+			   var ch=sen.charAt(i);
+               if(ch==' ' || ch==',' || (ch=='.' && i!=sen.length-1))	
+                 count++;			   
+			  }
+			  alert("Number of words are: "+count);
+		}
+</script>
+</head>
+<body>
+    Enter a Text:
+	<br><br>
+    <textarea id="txt"></textarea>
+	<br><br>
+	<input type="button" value="Count words" onclick="fun()" />
+</body>
+</html>

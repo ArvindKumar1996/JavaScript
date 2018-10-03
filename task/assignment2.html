@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       .main{
+           width:100%;
+       }
+       .left{
+           width:20%;
+           float:left;
+       }
+       .right{
+           width:80%;
+           float:left;
+       }
+       .btn{
+           width: 250px;
+           background: rgb(0, 225, 255);
+           border:2px solid rgb(95, 10, 91);
+           font-size: 20px;
+           color: brown;
+           height: 40px;
+       }
+       .btn:hover{
+           background: blueviolet;
+           cursor: pointer;
+           transition: 0.5s;
+           border:2px solid red;
+           color:aliceblue;
+           font-size: 30px;
+       }
+       #banner{
+           height: 330px;
+           text-align: center;
+           font-weight: bolder;
+           font-size: 100px;
+       }
+    </style>
+</head>
+<script>
+      function manage(imgno)
+	  {
+		  var bannerImg=document.getElementById("banner");
+          var inp=document.getElementById("p1").value;
+		  switch(imgno)
+		  {
+		     case 1:
+			 bannerImg.innerText=inp*10;
+             bannerImg.style="background:blue";
+			 break;
+			 case 2:
+             bannerImg.innerText=inp*20;
+             bannerImg.style="background:red";
+			 break;
+			 case 3:
+             bannerImg.innerText=inp*30;
+             bannerImg.style="background:green";
+			 break;
+			 case 4:
+             bannerImg.innerText=inp*40;
+             bannerImg.style="background:green";
+			 break;
+             case 5:
+			 bannerImg.innerText=inp*50;
+             bannerImg.style="background:pink";
+			 break;
+			 case 6:
+			 bannerImg.innerText=inp*60;
+             bannerImg.style="background:white";
+			 break;
+			 case 7:
+			 bannerImg.innerText=inp*70;
+             bannerImg.style="background:green";
+			 break;
+			 case 8:
+             bannerImg.innerText=inp*80;;
+             bannerImg.style="background:yellow";
+			 break;
+             case 9:
+			 bannerImg.innerText=inp*90;
+             bannerImg.style="background:green";
+			 break;
+			 case 10:
+			 bannerImg.innerText=inp*100;
+             bannerImg.style="background:yellow";
+			 break;
+			 
+		  }
+	  }
+</script>
+</head>
+<body>
+    <div style="height:50px;background:rgb(95, 10, 91)"><h2 style="padding:10px;"><input id="p1" style="height:30px;width:500px;" type="number" placeholder="Enter any number here!.... "></h2></div>
+    <div class="main">   
+        <div class="left">
+             <input class="btn" type="button"  onclick="manage(1)" value="1" /><br>
+             <input class="btn" type="button"  onclick="manage(2)" value="2" /><br>
+             <input class="btn" type="button"  onclick="manage(3)" value="3" /><br>
+             <input class="btn" type="button"  onclick="manage(4)" value="4" /><br>
+             <input class="btn" type="button"  onclick="manage(5)" value="5" /><br>
+             <input class="btn" type="button"  onclick="manage(6)" value="6" /><br>
+             <input class="btn" type="button"  onclick="manage(7)" value="7" /><br>
+             <input class="btn" type="button"  onclick="manage(8)" value="8" /><br>
+             <input class="btn" type="button"  onclick="manage(9)" value="9" /><br>
+             <input class="btn" type="button"  onclick="manage(10)" value="10" />
+            </div> 
+            <div class="right">
+<h1 id="banner"></h1>
+</div>
+</div> 
+</body>
+</html>

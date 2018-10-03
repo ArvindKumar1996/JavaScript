@@ -1,0 +1,191 @@
+<html>
+<head>
+<script>
+//for Timer 
+var hh=0,mm=0,ss=0,status='true';
+function clockTime(i)
+{
+if(i<10)
+{
+i='0'+i;
+}
+return i;
+}
+function setWatch()
+{
+ss++;
+if(ss>59)
+{
+mm+=1;
+ss=0;
+}
+if(mm>59)
+{
+hh+=1;
+mm=0;
+}
+if(hh>12)
+{
+hh=1;
+}
+if(status=='true')
+{
+var h=clockTime(hh);
+var m=clockTime(mm);
+var s=clockTime(ss);
+document.getElementById("txt1").value=h+":"+m+":"+s;
+}
+window.setTimeout("setWatch()",100);
+}
+
+//Next Question
+var qno=1;
+function nextQuestion()
+{
+var ques=document.getElementById("que"+qno);
+ques.style.display="none";
+qno++;
+if(qno>2)
+{
+alert("No More questions are available ,Plz submit your answer ");
+}
+else
+{
+var ques=document.getElementById("que"+qno);
+ques.style.display="block";
+}
+}
+//check Answer 
+var right=0;
+function checkAns1(ans)
+{
+if(ans.value.match("Yogi Aditya Nath"))
+right++;
+}
+function checkAns2(ans)
+{
+if(ans.value.match("Narendra Modi"))
+right++;
+}
+function checkAns3(ans)
+{
+if(ans.value.match("J.L.Nehru"))
+right++;
+}
+function checkAns4(ans)
+{
+if(ans.value.match("Ram Naik"))
+right++;
+}
+function checkAns5(ans)
+{
+if(ans.value.match("Hockey"))
+right++;
+}
+function checkAns6(ans)
+{
+if(ans.value.match("1914"))
+right++;
+}
+//Result declare
+function result()
+{
+if(right>3)
+{
+alert("Thanks ! User you passed into this test paper and your result is :  "+right);
+}
+else
+{
+alert("Hello ! User you failed into this paper and your result is : "+right);
+}
+}
+</script>
+<style>
+body
+{
+background:url('images/backslsidejpg.jpg')no-repeat;
+background-size:cover;
+}
+#main
+{
+width:90%;
+height:auto;
+margin:0px auto;
+background:rgba(0,0,0,0.8);
+}
+#header
+{
+width:100%;
+height:140px;
+background:navy;
+}
+#content
+{
+width:100%;
+height:600px;
+color:white;
+padding:10px;
+font-size:20px;
+}
+#footer
+{
+height:40px;
+width:100%;
+background:blue;
+color:white;
+text-align:center;
+font-size:18px;
+}
+</style>
+</head>
+<body onload="setWatch()">
+<div id="main">
+<div id="header">
+<span style="font-size:50px;font-weight:bold;padding:5px;color:white;text-shadow:5px 4px 5px red;">Start Your Test Paper</span>
+<span style="font-size:20px;color:white;margin-left:450px">Total Question:10</span><br>
+<span style="font-size:20px;color:white;margin-left:930px">Max Marks:10</span><br>
+<span style="font-size:30px;color:white;margin-left:150px;background:red;padding:5px;font-weight:bold;">Start Your Timing:<input type="text" id="txt1" style="font-size:30px;" readonly="true"/> </span>
+</div>
+<div id="content">
+<form id="que1" style="display:block">
+<h3>1). Who is the Chief Minster of U.P ?</h3>
+<input type="radio" onchange="checkAns1(this)" name="op1" value="Yogi Aditya Nath"/>Yogi Aditya Nath<br>
+<input type="radio" onchange="checkAns1(this)" name="op1" value="Akhilesh Yadav"/>Akhilesh Yadav<br>
+<input type="radio" onchange="checkAns1(this)" name="op1" value="Mayabati"/>Mayabati<br>
+<input type="radio" onchange="checkAns1(this)" name="op1" value="Mulayam Singh"/>Mulayam Singh<br>
+<h3>2). Who is the Prime Minster of India ?</h3>
+<input type="radio" onchange="checkAns2(this)" name="op2" value="Yogi Aditya Nath"/>Yogi Aditya Nath<br>
+<input type="radio" onchange="checkAns2(this)" name="op2" value="Narendra Modi"/>Narendra Modi<br>
+<input type="radio" onchange="checkAns2(this)" name="op2" value="Mayabati"/>Mayabati<br>
+<input type="radio" onchange="checkAns2(this)" name="op2" value="Man Mohan Singh"/>Man Mohan Singh<br>
+<h3>3). Who is the First Prime Minster of India ?</h3>
+<input type="radio" onchange="checkAns3(this)" name="op3" value="J.L.Nehru"/>J.L.Nehru<br>
+<input type="radio" onchange="checkAns3(this)" name="op3" value="Narendra Modi"/>Narendra Modi<br>
+<input type="radio" onchange="checkAns3(this)" name="op3" value="Mayabati"/>Mayabati<br>
+<input type="radio" onchange="checkAns3(this)" name="op3" value="Man Mohan Singh"/>Man Mohan Singh<br>
+</form>
+<form id="que2" style="display:none">
+<h3>4). Who is the Governor of U.P ?</h3>
+<input type="radio" onchange="checkAns4(this)" name="op4" value="Yogi Aditya Nath"/>Yogi Aditya Nath<br>
+<input type="radio" onchange="checkAns4(this)" name="op4" value="Akhilesh Yadav"/>Akhilesh Yadav<br>
+<input type="radio" onchange="checkAns4(this)" name="op4" value="Ram Naik"/>Ram Naik<br>
+<input type="radio" onchange="checkAns4(this)" name="op4" value="Mulayam Singh"/>Mulayam Singh<br>
+<h3>5).what is the international game of india ?</h3>
+<input type="radio" onchange="checkAns5(this)" name="op5" value="Cricket"/>Cricket<br>
+<input type="radio" onchange="checkAns5(this)" name="op5" value="Hockey"/>Hockey<br>
+<input type="radio" onchange="checkAns5(this)" name="op5" value="Kabaddi"/>Kabaddi<br>
+<input type="radio" onchange="checkAns5(this)" name="op5" value="Kho-Kho"/>Kho-Kho<br>
+<h3>6). When First World war starts in India ?</h3>
+<input type="radio" onchange="checkAns6(this)" name="op6" value="1918"/>1918<br>
+<input type="radio" onchange="checkAns6(this)" name="op6" value="1914"/>1914<br>
+<input type="radio" onchange="checkAns6(this)" name="op6" value="1904"/>1904<br>
+<input type="radio" onchange="checkAns6(this)" name="op6" value="1857"/>1857<br>
+</form>
+<br>
+<button style="background:red;font-size:20px;padding:5px;color:white" onclick="result()">Submit Question</button>
+<button style="background:green;font-size:20px;padding:5px;color:white" onclick="nextQuestion()">Next Question</button>
+</div>
+<div id="footer">Developed & Designed By : Er. ABC</div>
+</div>
+</body>
+</html>

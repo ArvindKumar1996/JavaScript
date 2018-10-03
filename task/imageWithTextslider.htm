@@ -1,0 +1,25 @@
+<!--Create a div and make two part of div first part move image slider and second with text slider together.-->
+<html>
+<head>
+<script>
+         var allImages=["1.jpg","2.jpg","3.jpg","4.jpg"];
+	     var texts=["This is my First Image","This is my Second Image","This is my Third Image","This is my Fourth Image"];
+	     var index=0;
+      function moveSlider(){
+	        var imgObj=document.getElementById("slider");
+			document.getElementById("div1").innerText=texts[index];
+			imgObj.src="../images/"+allImages[index];
+			index++;
+			if(index==allImages.length && index==texts.length)
+			index=0;
+			window.setTimeout("moveSlider()",1000);
+			}
+</script>
+</head>
+<body onload="moveSlider()">
+   <img id="slider" width="1000px" height="300px"/>
+   <div id="div1" > 
+</div>
+   
+</body>
+</html>

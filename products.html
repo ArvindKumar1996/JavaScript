@@ -1,0 +1,35 @@
+<!--Develop a web page by using javascript to display products into a table if products quantity is zero 
+-->	
+<html>
+<head>
+    <script>
+	    var products=[{PName:"T-Shirt",Brand:"Reebok",Price:350,Pic:"images/1.jpg",QTY:5},
+		               {PName:"Jeans",Brand:"Sparky",Price:2000,Pic:"images/2.jpg",QTY:12},
+		               {PName:"Shoes",Brand:"Woodland",Price:4500,Pic:"images/3.jpg",QTY:3},
+		               {PName:"Caps",Brand:"sports",Price:150,Pic:"images/3.jpg",QTY:3},
+		               {PName:"Shirts",Brand:"Peeterland",Price:2300,Pic:"images/1.jpg",QTY:0}];
+					  // alert(products[0].PName)
+		function MyProducts(){
+		          //alert(products[0].PName);
+		          //alert(products.length);
+		var tab="<table border='2' style='width=90%;height:230px;font-size:15px;'><tr style='background:navy;color:white;text-align:center;font-size:18px;font-weight:bold;'><th>Sr.No</th><th>Product Name</th><th>Price</th><th>Products Picture</th><th>Quantity</th></tr>";	  
+		  for(var i=0;i<products.length;i++)
+		   {
+		  if(products[i].QTY!=0)
+		  {
+		  tab+="<tr style='background:yellow;color:red;'><td>"+(i+1)+"</td></tr>";
+		  }
+		  
+		   }
+		   tab+="</table>";
+		   alert(tab);
+		   document.getElementById("DisplayItems").innerHTML=tab;
+		}
+	</script>
+</head>
+<body>
+<button onclick="MyProducts()">Show Products</button>
+<br><br>
+<p id="DisplayItems"></p>
+</body>
+</html>

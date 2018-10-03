@@ -1,0 +1,22 @@
+<html>
+<head>
+<script> 
+      function fun(){
+	     var n,reverse=0,remender;
+		 n=document.getElementById("txt1").value;
+		 while(n!=0)
+		 {
+		   remender=n%10;
+		   n=parseInt(n/10);
+		   reverse=reverse*10+remender;
+		 }
+		 alert(reverse);
+	  }
+</script>
+</head>
+<body>
+    <input type="number" id="txt1" />
+	<br><br>
+	<input type="button" onclick="fun()" value="reverse"/>
+</body>
+</html>

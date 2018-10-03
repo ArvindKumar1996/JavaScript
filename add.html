@@ -1,0 +1,24 @@
+<html>
+<head>
+<script>
+       function add(){
+	    var num1,num1,result;
+	   num1=document.getElementById("txt1").value;
+	   num2=document.getElementById("txt2").value;
+	   result=parseInt(num1)+parseInt(num2);
+	   var s=document.getElementById("sp");
+	   s.innerHTML="Your Addition is: <b>"+result+"</b>";
+	   alert(result);
+	   }
+</script>
+</head>
+<body>
+     <input type="text" id="txt1" />
+	 <br><br>
+	  <input type="text" id="txt2" />
+	 <br><br>
+	 <input type="button" onclick="add()" value="ADD"></button>
+	 <br><br>
+	 <span id="sp"></span>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!--Make simple text slider by using javascript-->
+<html>
+<head>
+<script>
+       var texts=["This is my First Text","This is my Second Text","This is my Third Text","This is my Four Text"];
+	   var index=0;
+       function moveTextSlider()
+	   {
+	   document.getElementById("div1").innerText=texts[index];
+	   index++;
+	   if(index==texts.length)
+	   {
+	       index=0;
+	   }
+	   window.setTimeout("moveTextSlider()",1500);
+	   }
+</script>
+</head>
+<body onload="moveTextSlider()">
+<div id="div1" style="background:navy;color:white;text-align:center;font-size:45px;font-weight:bold;padding-top:40px;border:10px dotted red;height:110px;width:90%;margin:0px auto;">
+    Arvind Kumar 
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!--Create a HTML page to count number of digits in a given sentence by using JS.-->
+<html>
+<head>
+<script>
+    function fun(){
+	        var count=0;
+			var s=document.getElementById("txt").value;
+			for(i=0;i<s.length;i++)
+			{
+			  var ch=s.charAt(i);
+               if(ch==1 ||ch==2 ||ch==3 ||ch==4 ||ch==5 ||ch==6 ||ch==7 ||ch==8 ||ch==9)	
+                 count++;			   
+			  }
+			  alert("Number of digits are: "+count);
+	}
+</script>
+</head>
+<body>
+<input type="text" id="txt" />
+<br><br>
+<input type="button" onclick="fun()" value="Count Number" />
+</body>
+</html>

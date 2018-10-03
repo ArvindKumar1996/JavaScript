@@ -1,0 +1,36 @@
+<html>
+<head>
+   <script>
+       function add(){
+	   var num1,num2,num3,num4,num5,result,Percentage;
+	   num1=document.getElementById("txt1").value;
+	   num2=document.getElementById("txt2").value;
+	   num3=document.getElementById("txt3").value;
+	   num4=document.getElementById("txt4").value;
+	   num5=document.getElementById("txt5").value;
+	   result=parseInt(num1)+parseInt(num2)+parseInt(num3)+parseInt(num4)+parseInt(num5);
+	   percentage=(result/500)*100;
+	   var s=document.getElementById("sp");
+	   s.innerHTML="Total Marks is: <b>"+result+"<br><br></b>"+percentage+"</b>%";
+	   alert(result);
+	   alert(percentage);
+	   }
+   </script>
+</head>
+ <body>
+ Sunject1:
+ <input type="text" id="txt1" /><br><br>
+ Sunject2:
+ <input type="text" id="txt2" /><br><br>
+ Sunject3:
+ <input type="text" id="txt3" /><br><br>
+ Sunject4:
+ <input type="text" id="txt4" /><br><br>
+ Sunject5:
+ <input type="text" id="txt5" />
+ <br><br><br>
+ <input type="button" onclick="add()" value="ADD"></button>
+ <br><br>
+ <span id="sp"></span>
+ </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       .main{
+           width:100%;
+       }
+       .left{
+           width:20%;
+           float:left;
+       }
+       .right{
+           width:80%;
+           float:left;
+       }
+       .btn{
+           width: 280px;
+           height:80px;
+           background: rgb(0, 225, 255);
+           border:2px solid rgb(95, 10, 91);
+           font-size: 20px;
+           color: brown;
+       }
+       .btn:hover{
+           background: blueviolet;
+           cursor: pointer;
+           height: 82px;
+           transition: 0.5s;
+           border:2px solid red;
+           color:aliceblue;
+           font-size: 30px;
+       }
+    </style>
+</head>
+<script>
+      function manage(imgno)
+	  {
+		  var bannerImg=document.getElementById("banner");
+		  switch(imgno)
+		  {
+		     case 1:
+			 bannerImg.src="images/1.jpeg";
+			 break;
+			 case 2:
+			 bannerImg.src="images/2.jpeg";
+			 break;
+			 case 3:
+			 bannerImg.src="images/3.jpeg";
+			 break;
+			 case 4:
+			 bannerImg.src="images/4.jpeg";
+			 break;
+			 
+		  }
+	  }
+</script>
+</head>
+<body>
+    <div style="height:50px;background:rgb(95, 10, 91)"><h2 style="padding:10px;">Images.......</h2></div>
+    <div class="main">   
+        <div class="left">
+             <input class="btn" type="button"  onclick="manage(1)" value="Bill Gates" /><br>
+             <input class="btn" type="button"  onclick="manage(2)" value="Water Drops" /><br>
+             <input class="btn" type="button"  onclick="manage(3)" value=Sunshine /><br>
+             <input class="btn" type="button"  onclick="manage(4)" value="Newton" />
+            </div> 
+            <div class="right">
+<img style="border:10px solid rgb(62, 13, 119)" id="banner" width="1060px" height="300px"/>
+</div>
+</div> 
+</body>
+</html>

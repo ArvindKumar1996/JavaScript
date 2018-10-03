@@ -1,0 +1,27 @@
+<!-- Create a HTML page to on and off a bulb at  run timre by using js -->
+<html>
+<head>
+<script>
+      function manage()
+	  {
+	      var b,im;
+		  b=document.getElementById("btn");
+		  im=document.getElementById("imbulb");
+		  if(b.value=="ON")
+		  { 
+		  im.src="images/img_avatar2.png";
+		  b.value="OFF";
+		  }
+		  else{
+		  im.src="images/img_avatar3.png";
+		  b.value="ON";
+		  }
+	  }
+</script>
+</head>
+<body>
+   <img id="imbulb" src="images/img_avatar2.png"/>
+   <br><br>
+   <input type="button" id="btn" onclick="manage()" value="ON" />
+</body>
+</html>

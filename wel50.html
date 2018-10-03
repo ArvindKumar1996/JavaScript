@@ -1,0 +1,24 @@
+<!-- Create a HTML page to print welcome 50times of a number using js -->
+<html>
+<head>
+    <script>   
+	           function fun(){
+			   var st,p,i,x="";
+			   st=document.getElementById("txt").value;
+			   for(i=1;i<=50;i++)
+			   {
+				x=x+i+". Welcome"+" "+"<b>"+st+"</b>"+"<br>";
+			     p=document.getElementById("para");
+			     p.innerHTML=x;
+			   }
+			   }
+	</script>
+</head>
+<body>
+	 <input type="text" id="txt" />
+	 <br><br>
+	 <input type="button" value="Print" onclick="fun()" />
+	 <br><br>
+	 <p id="para"></p>
+</body>
+</html>
